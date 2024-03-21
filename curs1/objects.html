@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /*
+  const product = {
+    name: 'socks',
+    price: 1090
+  }
+  console.log(typeof(product));
+  console.log(product.name);
+  console.log(product.price);
+
+  product.name = 'cotton socks'
+  console.log(product.name);
+
+  product.newProperty = true;
+  console.log(product);
+
+  delete product.newProperty;
+  console.log(product);
+*/
+
+/*const product2 = {
+
+  name: 'shirt',
+  'delivery-time': '1 day',
+  rating: {
+    stars: 4.5,
+    count: 87
+  },
+  fun: function function1(){
+
+    console.log('function inside object.');
+
+  }
+};
+console.log(product2);
+console.log(product2.name);
+console.log(product2['name']);
+console.log(product2['delivery-time']);// accepta "-" daca pun []
+
+console.log(product2.rating.count) // apeleaza count din rating
+product2.fun();
+console.log(typeof console.log);
+
+const jsonString = JSON.stringify(product2);
+
+console.log(jsonString);
+console.log(JSON.parse(jsonString));
+*/
+
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+
+const object1 = {
+  message: 'hello',
+}
+
+const object2 = object1; // copiaza referinta
+
+object1.message = 'Good job!';
+console.log(object1);
+console.log(object2);
+
+
+const object3 = {
+  message: 'Good job!',
+}
+
+console.log(object3 === object1); // nu merg comparate deoarece sunt referinte nu valori
+console.log(object2 === object1); // au aceasi referinta
+
+
+const object4 = {
+  message: 'Good job!',
+  price: 799
+};
+// const message = object4.message; fac acelasi lucru
+const { message, price } = object4; // deconstructie
+console.log(message);
+console.log(price);
+
+const object5 = {
+  //message: message, face acelasi lucru cu linia de sub
+  message,
+
+
+//  method: function function1(){
+ //   console.log('method');
+  // } - face acelasi lucru cu metoda de mai jos - shorthand method
+
+  method(){
+    console.log('method');
+  }
+};
+console.log(object5);
+object5.method();
+</script>
+</html>
